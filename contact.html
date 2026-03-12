@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+<div class="nav-container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo.png" alt="Pints & Pals">
+  </a>
+</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="subpage.html">London</a></li>
+<li><a href="Edi.html">Edinburgh</a></li>   
+<li><a href="https://discord.gg/hZmJEGJ63Q" target="_blank">Discord</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="container">
+
+<h1>Contact</h1>
+<form action="https://formsubmit.co/al@pintsandpals.co.uk" method="POST">
+<input type="text" name="name" placeholder="Name" required><br>
+<input type="email" name="email" placeholder="Email" required><br>
+<textarea name="message" placeholder="Message" required></textarea><br>
+<button type="submit">Send Message</button>
+</form>
+
+</div>
+<script src="menu.js"></script>
+</body>
+</html>
