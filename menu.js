@@ -3,7 +3,7 @@ function toggleMenu(){
   menu.classList.toggle("active");
 }
 
-// Expandable Image Functions
+// Expandable Images
 function expandImage(img) {
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("modalImg");
