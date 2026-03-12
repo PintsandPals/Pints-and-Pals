@@ -2,7 +2,7 @@
 body{
 margin:0;
 font-family:Courier New, monospace;
-background-image:url("https://i.pinimg.com/1200x/00/5a/f0/005af0ac3a1c86f48c6cf515655c4ccf.jpg");
+background-image:url("Background.jpg");
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
@@ -100,12 +100,193 @@ border-radius:5px;
 
 
 }
-/* PAGE CONTENT */
 .container{
 padding:120px 20px;
 text-align:center;
 max-width:900px;
 margin:auto;
 animation:fadeIn 1.2s ease;
+
 }
+.blog-posts {
+  margin-top: 40px;
+  text-align: left;
 }
+
+.blog-posts .post {
+  background: rgba(0,0,0,0.6); 
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease;
+}
+
+.blog-posts .post h2 {
+  margin-top: 0;
+  color: #FFD700; 
+}
+
+.blog-posts .post p {
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* Expandable Image Styles */
+.expandable-image img {
+  width: 100%;
+  max-width: 600px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 20px 0;
+  transition: transform 0.3s;
+}
+
+.expandable-image img:hover {
+  transform: scale(1.05);
+}
+.expandable-images-container {
+  display: flex;             /* puts images in a row */
+  justify-content: center;   /* center them horizontally */
+  gap: 20px;                 /* space between images */
+  flex-wrap: wrap;           /* stack on smaller screens */
+  margin: 20px 0;
+}
+
+.expandable-images-container .expandable-image img {
+  width: 300px;              /* adjust size as needed */
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.expandable-images-container .expandable-image img:hover {
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000; 
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* home page maps */
+.image-section {
+  display: flex;
+  justify-content: center; 
+  gap: 40px;               
+  margin: 40px 20px;       
+  flex-wrap: wrap;          
+}
+
+.image-card {
+  text-align: center;
+  max-width: 300px;
+}
+
+.image-card h2 {
+  margin-bottom: 15px;
+  /* remove color here if you want to apply it only to links */
+}
+
+.image-card h2 a {
+  color: #FFD700;       /* gold for links */
+  text-decoration: none; /* removes underline */
+}
+
+.image-card h2 a:hover {
+  text-decoration: underline; /* optional hover effect */
+}
+
+.image-card img {
+  width: 100%;             
+  height: auto;
+  border-radius: 10px;     
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.image-card img:hover {
+  transform: scale(1.05);
+}
+
+
+.team-section {
+  display: flex;
+  justify-content: center; 
+  gap: 30px;               
+  margin: 60px 20px;       
+  flex-wrap: wrap;          
+}
+
+.team-card {
+  background: rgba(0,0,0,0.6); 
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  max-width: 250px;           
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: scale(1.03);     
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.team-card h3 {
+  margin: 10px 0 5px;
+  color: #FFD700;            
+}
+
+.team-card p {
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Responsive: stack cards on narrow screens */
+@media (max-width: 800px) {
+  .team-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
