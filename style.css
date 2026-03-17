@@ -1,4 +1,3 @@
-
 body{
 margin:0;
 font-family:Courier New, monospace;
@@ -58,6 +57,90 @@ transition:0.3s;
 background:#fb5a48;
 }
 
+.menu-toggle {
+display:none;
+}
+
+/* -------------------- */
+/* DROPDOWN MENU FIX */
+/* -------------------- */
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+background:#D3D7CF;
+list-style:none;
+padding:0;
+margin:0;
+min-width:180px;
+box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu li a{
+display:block;
+padding:10px;
+text-decoration:none;
+color:black;
+}
+
+.dropdown-menu li a:hover{
+background:#fb5a48;
+}
+
+.dropdown-menu.show{
+display:block;
+}
+
+/* Desktop hover dropdown */
+
+@media (min-width:768px){
+.dropdown:hover .dropdown-menu{
+display:block;
+}
+}
+
+/* -------------------- */
+/* MOBILE NAVIGATION */
+/* -------------------- */
+
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+background:#D3D7CF;
+position:absolute;
+top:50px;
+left:0;
+width:100%;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+/* Make dropdown behave nicely in stacked menu */
+
+.dropdown-menu{
+position:static;
+box-shadow:none;
+background:#D3D7CF;
+}
+
+}
+
+
+/* REST OF MY CSS */
+
+
 @keyframes fadeIn{
 from{opacity:0; transform:translateY(20px);}
 to{opacity:1; transform:translateY(0);}
@@ -79,166 +162,145 @@ cursor:pointer;
 border-radius:5px;
 }
 
-.menu-toggle {
-  display: none; /* hide on desktop */
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* show on mobile */
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #D3D7CF;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-
-
-}
 .container{
-padding:120px 20px;
+padding:40px 10px 10px;
 text-align:center;
 max-width:900px;
 margin:auto;
 animation:fadeIn 1.2s ease;
-
-}
-.blog-posts {
-  margin-top: 40px;
-  text-align: center;
 }
 
-.blog-posts .post {
-  background: rgba(0,0,0,0.6); 
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  animation: fadeIn 1s ease;
+.blog-posts{
+margin-top:40px;
+text-align:center;
 }
 
-.blog-posts .post h2 {
-  margin-top: 0;
-  color: #FFD700; 
+.blog-posts .post{
+background:rgba(0,0,0,0.6);
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 4px 8px rgba(0,0,0,0.3);
+animation:fadeIn 1s ease;
 }
 
-.blog-posts .post p {
-  color: #fff;
-  line-height: 1.5;
+.blog-posts .post h2{
+margin-top:0;
+color:#FFD700;
+}
+
+.blog-posts .post p{
+color:#fff;
+line-height:1.5;
 }
 
 /* Expandable Image Styles */
-.expandable-image img {
-  width: 100%;
-  max-width: 600px;
-  cursor: pointer;
-  border-radius: 8px;
-  margin: 20px 0;
-  transition: transform 0.3s;
+
+.expandable-image img{
+width:100%;
+max-width:600px;
+cursor:pointer;
+border-radius:8px;
+margin:20px 0;
+transition:transform 0.3s;
 }
 
-.expandable-image img:hover {
-  transform: scale(1.05);
-}
-.expandable-images-container {
-  display: flex;             /* puts images in a row */
-  justify-content: center;   /* center them horizontally */
-  gap: 20px;                 /* space between images */
-  flex-wrap: wrap;           /* stack on smaller screens */
-  margin: 20px 0;
+.expandable-image img:hover{
+transform:scale(1.05);
 }
 
-.expandable-images-container .expandable-image img {
-  width: 300px;              /* adjust size as needed */
-  height: auto;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s;
+.expandable-images-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin:20px 0;
 }
 
-.expandable-images-container .expandable-image img:hover {
-  transform: scale(1.05);
+.expandable-images-container .expandable-image img{
+width:300px;
+height:auto;
+border-radius:8px;
+cursor:pointer;
+transition:transform 0.3s;
 }
 
-.modal {
-  display: none; 
-  position: fixed;
-  z-index: 1000; 
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.8);
+.expandable-images-container .expandable-image img:hover{
+transform:scale(1.05);
 }
 
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 8px;
+.modal{
+display:none;
+position:fixed;
+z-index:1000;
+padding-top:60px;
+left:0;
+top:0;
+width:100%;
+height:100%;
+overflow:auto;
+background-color:rgba(0,0,0,0.8);
 }
 
-.close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
+.modal-content{
+margin:auto;
+display:block;
+max-width:90%;
+max-height:90%;
+border-radius:8px;
 }
+
+.close{
+position:absolute;
+top:20px;
+right:35px;
+color:#fff;
+font-size:40px;
+font-weight:bold;
+cursor:pointer;
+}
+
 /* home page maps */
-.image-section {
-  display: flex;
-  justify-content: center; 
-  gap: 40px;               
-  margin: 40px 20px;       
-  flex-wrap: wrap;          
+
+.image-section{
+display:flex;
+justify-content:center;
+gap:40px;
+margin:40px 20px;
+flex-wrap:wrap;
 }
 
-.image-card {
-  text-align: center;
-  max-width: 300px;
+.image-card{
+text-align:center;
+max-width:300px;
 }
 
-.image-card h2 {
-  margin-bottom: 15px;
-  /* remove color here if you want to apply it only to links */
+.image-card h2{
+margin-bottom:15px;
 }
 
-.image-card h2 a {
-  color: #FFD700;       /* gold for links */
-  text-decoration: none; /* removes underline */
+.image-card h2 a{
+color:#FFD700;
+text-decoration:none;
 }
 
-.image-card h2 a:hover {
-  text-decoration: underline; /* optional hover effect */
+.image-card h2 a:hover{
+text-decoration:underline;
 }
 
-.image-card img {
-  width: 100%;             
-  height: auto;
-  border-radius: 10px;     
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
+.image-card img{
+width:100%;
+height:auto;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+transition:transform 0.3s;
 }
 
-.image-card img:hover {
-  transform: scale(1.05);
+.image-card img:hover{
+transform:scale(1.05);
 }
+
+
 
 
 .team-section {
@@ -301,7 +363,10 @@ animation:fadeIn 1.2s ease;
 }
 
 
-
-
-
+/*fix for container issue for floating images on index page*/
+.full-width {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
