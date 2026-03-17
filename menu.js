@@ -3,6 +3,16 @@ function toggleMenu(){
   menu.classList.toggle("active");
 }
 
+function toggleDropdown(event) {
+event.preventDefault();
+
+var menu = document.getElementById("london-menu");
+
+menu.classList.toggle("show");
+}
+
+
+
 // Expandable Images
 function expandImage(img) {
   const modal = document.getElementById("imageModal");
