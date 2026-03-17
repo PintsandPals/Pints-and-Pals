@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Pints & Pals</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <nav>
+<div class="nav-container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo.png" alt="Pints & Pals">
+  </a>
+</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+<a href="#" onclick="toggleDropdown(event)">London</a>
+
+<ul class="dropdown-menu" id="london-menu">
+<li><a href="subpage.html">Halcyon Freeze</a></li>
+<li><a href="Trickster.html">The Trickster's Trap</a></li>
+<li><a href="community days.html">Community Days</a></li>
+</ul>
+</li>
+    
+<li><a href="Edi.html">Edinburgh</a></li>   
+<li><a href="https://discord.gg/hZmJEGJ63Q" target="_blank">Discord</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+
+
+    <div class="container">
+
+
+  <div class="blog-posts">
+    <div class="post">
+      <h2>The Trickster's trap</h2>
+      <p>This was our 2025 London campagin and has now finished, below is an archive of the game.</p>
+    </div>
+
+<div class="expandable-images-container">
+  <div class="expandable-image">
+    <img src="Moonstone.png" alt="map 1" onclick="expandImage(this)">
+  </div>
+  <div class="expandable-image">
+    <img src="Sunstone.jpg" alt="map 2" onclick="expandImage(this)">
+  </div>
+    <div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+</div>
+
+<!--add newest blog post here -->
+
+<div class="post">
+    <h2>18/05/25 - Brewdragon</h2>
+    <p>Our party found themselves on a ferry bound for Gwynne, a small tropical island with a bustling tourist economy. The party was on a Brewdragon ferry and found the captain about to blow up the boat, thinking quickly (some would argue too quickly) the rogue killed the captain. Allagations where shot across the party as to who should take responsibility but they found a letter blackmailing the captain to blow up the boat or his family would be killed. 
+
+The letter came from the heir of a rival hospitality chain called Tridents. After docking safely on Gwynne, the party decided to utilise one of their criminal contacts and the bard Shot Tray Strikes’ disguise self spell to lure the blackmailer onto the rooftop of a hotel and make him sign over his entire fortune before he “slipped off the roof”. Whether they are heroes or villains or something else altogether, the party found themselves with more money than sense and with job offers from Brewdragon. What scheme will they come up with next? 
+</p>
+</div>
+      
+ <div class="post">
+      <h2>11/05/25 - Platinum Prick</h2>
+      <p>
+Last session saw the party sneak their way into the mansion of a local royal known as The Platinum Lord. Finding him to be an utter waste of space, they decided the only good thing to do would be to take the bag of holding they found and empty his vault. 
+
+Thanks to the successful impersonation of various members of the household staff, including firing an actual member of the staff the party were able to slip out of the mansion with The Platinum Lord’s entire fortune. 
+
+As they hop on the first ferry off the island where will they go?
+
+</p>
+    </div>
+
+
+      
+
+<script src="menu.js"></script>

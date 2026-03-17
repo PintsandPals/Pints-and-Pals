@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Pints & Pals</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <nav>
+<div class="nav-container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo.png" alt="Pints & Pals">
+  </a>
+</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+<a href="#" onclick="toggleDropdown(event)">London</a>
+
+<ul class="dropdown-menu" id="london-menu">
+<li><a href="subpage.html">Halcyon Freeze</a></li>
+<li><a href="Trickster.html">The Trickster's Trap</a></li>
+<li><a href="london-events.html">Community Days</a></li>
+</ul>
+</li>
+    
+<li><a href="Edi.html">Edinburgh</a></li>   
+<li><a href="https://discord.gg/hZmJEGJ63Q" target="_blank">Discord</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+
+
+    <div class="container">       
+  <div class="blog-posts">
+    <div class="post">
+      <h2>Community Days</h2>
+      <p>We host a monthly Community Day in London where we play indie TTRPGs, hang out, and just generally natter about our mutual love of TTRPGs.</p>
+    </div>
+
+
+<div class="expandable-images-container">
+  <div class="expandable-image">
+    <img src="communityday4.jpg" alt="flyer" onclick="expandImage(this)">
+  </div>
+    <div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+</div>
+
+      
+<div class="post">
+    <h2>28/02/26</h2>
+    <p>Join us at 4pm for another community day with games of:
+<br>
+- Never Stop Blowing Up: an action movie flavoured as Victorian steam punk with small familiars in a TTRPG
+<br>
+- Ryuutma: A game about going on a fantastic journey with friends and celebrating the joys of travel
+<br>
+- Warhammer 40k Wrath and Glory: a dystopian future where you will encounter xenos and the horrors of the warp</p>
+</div>
+
+      
+<div class="post">
+    <h2>03/01/26</h2>
+    <p>We know most people are still away seeing family but we've decided to kick the new year off with a chill community day. Join us for games of:
+        <br>
+    - Monster of the Week: there are monsters on the loose in 00s Brighton
+        <br>
+    - Never Stop Blowing Up: an action movie in a TTRPG</p>
+</div>
+      
+<div class="post">
+    <h2>13/12/25</h2>
+    <p>Following how much fun our last community day was this month we decided to host another. This month we'll be running tables of:
+        <br>
+    - Mothership
+        <br>
+    - Teens in Space
+        <br>
+    - The Forest Hymn & Picnic
+        <br>
+    - Rick & Morty D&D</p>
+</div>
+
+      
+<div class="post">
+    <h2>25/10/25</h2>
+    <p>This community day we will be running 3 tables:
+        <br>
+    - Kids on Bikes
+        <br>
+    - Blades in the Dark
+        <br>
+    - Call of Cthulhu</p>
+</div>
+
+      
+<script src="menu.js"></script>
