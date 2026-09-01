@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Pints & Pals</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <nav>
+<div class="nav-container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo.png" alt="Pints & Pals">
+  </a>
+</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+<a href="#" onclick="toggleDropdown(event)">London</a>
+
+<ul class="dropdown-menu" id="london-menu">
+<li><a href="subpage.html">Halcyon Freeze</a></li>
+<li><a href="Lnd2.html">Belle Vue</a></li>
+<li><a href="Trickster.html">The Trickster's Trap</a></li>
+<li><a href="community days.html">Community Days</a></li>
+</ul>
+</li>
+    
+<li><a href="Edi.html">Edinburgh</a></li>   
+<li><a href="https://discord.gg/hZmJEGJ63Q" target="_blank">Discord</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+
+
+    <div class="container">
+  <div class="blog-posts">
+    <div class="post">
+      <h2>The Belle Vue</h2>
+      <p>Gather one and gather all for a night of adventure, madness, laughing and good times as we welcome DnD to the belle vue clapham. First time player? No worries, our DM is on hand to help you with all of the basics and character creation. Seasoned veteran looking for some new folks to play with? You are more than welcome.
+
+All items needed to paly will be provided by the venue and that includes dice. 
+
+To sign up for this game click the meetup button below that will take you to our meetup page and you can hit attend there. 
+We look forward to having you.</p>
+    </div>
+
+<div class="expandable-images-container">
+
+    <div class="expandable-image">
+        <img src="Pints and Pals new poster.png"
+             alt="Belle Vue poster"
+             onclick="expandImage(this)">
+    </div>
+
+    <div class="expandable-image">
+        <a href="https://www.meetup.com/pints-and-pals/events/316302304/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link&utm_version=v2"
+           target="_blank">
+            <img src="Meetup.png" alt="Meetup Link">
+        </a>
+    </div>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+</div>
+ 
+<div class="post">
+  <h2>Location: Belle Vue Pub.</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2485.7991813175927!2d-0.1401632233287298!3d51.46184341403034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876044d82f0ba05%3A0xfc90e81795c1c4c1!2sBelle%20Vue!5e0!3m2!1sen!2suk!4v1788177914925!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+      
+<!--add newest blog post here -->
+
+<div class="post">
+    <h2>02/09/26 - Session 1</h2>
+    <p> Join us for the first session of a brand new campaign!
+</p>
+</div>
+
+
+
+      
+
+<script src="menu.js"></script>
